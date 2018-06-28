@@ -4,7 +4,10 @@
 {% if msg != "" %} <br />{{ msg }} {% else %} {% endif %}
 {% endblock subtitle %}
 
+
 {% block content %}
+<strong style="color: red;">For testing, use 'a' for both username and password</strong><br />
+<strong style="color: red;">Alternatively, use 'bob' for username and 'b' for password</strong><br /><br />
 <form method="POST">
     {% if error %}<p>{{ error }}</p>{% endif %}
     <label for="name-input">Username:</label><input id="name-input" type="text" name="name"><br>
