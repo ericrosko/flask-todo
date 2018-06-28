@@ -2,7 +2,18 @@
 
 """
 Scripts to run to set up our database
+
+IMPORTANT: In addition to running this once to set things up, you
+must also assing this environmental variable in the terminal:
+export SECRET_KEY=efkje323kjfdf
+The key can be any number you want.
+See all env variables by typing 'env' in the terminal.
+This key is used here:
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY').encode()
+It is used to encode the web session.
 """
+
 from datetime import datetime
 from model import db, User, Task
 from passlib.hash import pbkdf2_sha256
