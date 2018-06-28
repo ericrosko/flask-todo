@@ -1,0 +1,17 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Debug{% endblock subtitle %}
+
+{% block content %}
+
+<form method="POST">
+    <input type="hidden" name="debug_action" value="mark_all_as_incomplete">
+    <input type="submit" value="Mark All As Incomplete">
+</form>
+
+User variable {{ user }}
+
+{% if user != "" %} <br /> </br> {{ user }} {% else %} <br /> No user logged in. {{ user }} {% endif %}
+
+
+{% endblock content %}
